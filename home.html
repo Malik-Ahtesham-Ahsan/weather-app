@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-10/css/fontawesome.min.css"
+        integrity="sha512-w6aR+ruq5accTDo9TEZUq3WweQKhI70L3SQ4c9/GkVY557WUqz5I2JVUl9JiVxSmM37fH/eFxwuXbp6bTZGBvA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <div class="wave-one"></div>
+        <div class="wave-two"></div>
+        <div class="wave-three"></div>
+        <div id="wheathercon"><i class="fa-solid fa-sun"></i></div>
+        <div class="info">
+            <div class="location"><i class="fa-solid fa-street-view">{%name%},{%country%}</i></div>
+            <p id="date"></p>
+            <h1 class="temp">{%temp%}</h1>
+            <h3 class="tempmin-max">maxlat {%temp_min%} | minlon {%temp_max%}</h3>
+        </div>
+
+    </div>
+    <script>
+        const curDate = document.getElementById("date");
+        let wheathercon = document.getElementById("wheathercon");
+        const tempStatus = "clouds"
+        const getCurrentDay = () => {
+            var weekday = new Array(7);
+            weekday[0] = "sunday";
+            weekday[1] = "monday"
+            weekday[2] = "tuesday"
+            weekday[3] = "wednesday"
+            weekday[4] = "thursday"
+            weekday[5] = "friday"
+            weekday[6] = "saturday"
+            let currTime = new Date();
+            console.log(weekday[currTime.getDay()]);
+        };
+        const getCurrentTime = () => {
+            var now = new Date();
+            var month = now.getMonth() + 1;
+            var day = now.getDate();
+            var year = now.getFullYear();
+            let hours = now.getHours();
+            let minute = now.getMinutes();
+        }
+        //getCurrentDay()
+    </script>
+</body>
+
+</html>
